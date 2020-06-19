@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     Control
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="./accountMana">Account Management</a>
+    
+    </div>
+  </div>
+<table class="table1 table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">CodMov</th>
+      <th scope="col">concept</th>
+      <th scope="col">date</th>
+      <th scope="col">Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if  (typeof finances != "undefined" ){
+            finances.forEach(function(finance){ %>
+    <tr>
+      <th><%= finance.id %></th>
+      <td><%= finance.Concept %></td>
+      <td><%= finance.date %></td>
+      <td><%= finance.amount %></td>
+      <td>
+        
+        <a href="fdelete/<%= finance.id %>" class="btn btn-sm btn-danger">Delete</a>
+    </td>
+    </tr>
+    <% })}; %>
+    
+  </tbody>
+  <tbody>
+    <tr > 
+      <th class="last" >N Mov : </th>
+      <td class="last" > </td>
+      <td class="last" > NUMBER OF MOVMENT <%= Count.count%> / <%= Count.count%>  </td>
+      <td class="last" ><% if  (typeof finances != "undefined"){%><%= sum.sum %><%}%></td>
+    </tr>
+</tbody>
+</table>
+ 
+</body>
+</html>

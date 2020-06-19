@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widcontainerth=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Control
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="./accountMana">Account Management</a>
+        
+        </div>
+      </div> 
+    
+        
+    <form action="/incomes" method="POST" >
+        
+            <div class="form_container">
+                
+                <input  name="fid" id="id" type="hidden" >
+            </div>
+            <div class="form_container">
+                <label>Concept</label>
+                <input   name ="concept"   id="concept" type="text" required>
+            </div>
+            <div class="form_container">
+                <label>date</label>
+                <input   name ="fdate"   id="fdate" type="date" required>
+            </div>
+            <div class="form_container">
+                <label>Amount</label>
+                <input   name ="famount"  id="famount" type="number" required >
+            </div>
+            <div class="btns" >
+        
+            <button class="buttons" type="submit">Add </button>
+            </div>
+
+       
+        
+        
+
+    </form>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> </script>
+</body>
+
+</html>
